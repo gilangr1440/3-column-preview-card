@@ -1,0 +1,150 @@
+$bright-orange: hsl(31, 77%, 52%);
+$dark-cyan: hsl(184, 100%, 22%);
+$very-dark-cyan: hsl(179, 100%, 13%);
+
+$transparent-white: hsla(0, 0%, 100%, 0.75);
+$very-light-gray: hsl(0, 0%, 95%);
+
+$lexend-deca: "Lexend Deca", sans-serif;
+$big-shoulder: "Big Shoulders Display", sans-serif;
+
+body {
+  height: 200vh;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 20px auto;
+  border-radius: 20px;
+
+  $car-card: (
+    sedans: $bright-orange,
+    suvs: $dark-cyan,
+    luxury: $very-dark-cyan,
+  );
+
+  @each $car, $color in $car-card {
+    & .#{$car} {
+      background-color: $color;
+      padding: 50px;
+      box-sizing: border-box;
+
+      & .icon-container {
+        margin-bottom: 30px;
+      }
+
+      & .title {
+        font-family: $big-shoulder;
+        font-size: 36px;
+        font-weight: 700;
+        color: $very-light-gray;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+      }
+
+      & .desc {
+        font-family: $lexend-deca;
+        font-size: 15px;
+        font-weight: 400;
+        color: $transparent-white;
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+
+      & .button {
+        font-family: $lexend-deca;
+        font-size: 15px;
+        font-weight: 400;
+        color: $color;
+        background-color: $very-light-gray;
+        border: none;
+        border-radius: 50px;
+        width: 130px;
+        height: 45px;
+        box-sizing: border-box;
+
+        &:hover {
+          cursor: pointer;
+          background-color: transparent;
+          color: $very-light-gray;
+          border: 2px solid $very-light-gray;
+        }
+      }
+    }
+
+    @if $car == sedans {
+      & .#{$car} {
+        border-radius: 10px 10px 0 0;
+      }
+    } @else if $car == luxury {
+      & .#{$car} {
+        border-radius: 0 0 10px 10px;
+      }
+    }
+  }
+}
+
+.attribution {
+  font-family: $lexend-deca;
+
+  & a {
+    text-decoration: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .card {
+    width: 80%;
+    margin: 0;
+
+    $car-card: (
+      sedans: $bright-orange,
+      suvs: $dark-cyan,
+      luxury: $very-dark-cyan,
+    );
+
+    @each $car, $color in $car-card {
+      & .#{$car} {
+        width: 33.3%;
+        height: 500px;
+        position: relative;
+
+        // & .desc {
+        //   //   margin-bottom: 90px;
+        // }
+
+        & .button {
+          position: absolute;
+          bottom: 50px;
+        }
+      }
+
+      @if $car == sedans {
+        & .#{$car} {
+          border-radius: 10px 0 0 10px;
+        }
+      } @else if $car == luxury {
+        & .#{$car} {
+          border-radius: 0 10px 10px 0;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .card {
+    width: 65%;
+  }
+}

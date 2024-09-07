@@ -1,0 +1,203 @@
+body {
+  height: 200vh;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 20px auto;
+  border-radius: 20px;
+}
+.card .sedans {
+  background-color: hsl(31, 77%, 52%);
+  padding: 50px;
+  box-sizing: border-box;
+}
+.card .sedans .icon-container {
+  margin-bottom: 30px;
+}
+.card .sedans .title {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: hsl(0, 0%, 95%);
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.card .sedans .desc {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.card .sedans .button {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: hsl(31, 77%, 52%);
+  background-color: hsl(0, 0%, 95%);
+  border: none;
+  border-radius: 50px;
+  width: 130px;
+  height: 45px;
+  box-sizing: border-box;
+}
+.card .sedans .button:hover {
+  cursor: pointer;
+  background-color: transparent;
+  color: hsl(0, 0%, 95%);
+  border: 2px solid hsl(0, 0%, 95%);
+}
+.card .sedans {
+  border-radius: 10px 10px 0 0;
+}
+.card .suvs {
+  background-color: hsl(184, 100%, 22%);
+  padding: 50px;
+  box-sizing: border-box;
+}
+.card .suvs .icon-container {
+  margin-bottom: 30px;
+}
+.card .suvs .title {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: hsl(0, 0%, 95%);
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.card .suvs .desc {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.card .suvs .button {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: hsl(184, 100%, 22%);
+  background-color: hsl(0, 0%, 95%);
+  border: none;
+  border-radius: 50px;
+  width: 130px;
+  height: 45px;
+  box-sizing: border-box;
+}
+.card .suvs .button:hover {
+  cursor: pointer;
+  background-color: transparent;
+  color: hsl(0, 0%, 95%);
+  border: 2px solid hsl(0, 0%, 95%);
+}
+.card .luxury {
+  background-color: hsl(179, 100%, 13%);
+  padding: 50px;
+  box-sizing: border-box;
+}
+.card .luxury .icon-container {
+  margin-bottom: 30px;
+}
+.card .luxury .title {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: hsl(0, 0%, 95%);
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.card .luxury .desc {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.card .luxury .button {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: hsl(179, 100%, 13%);
+  background-color: hsl(0, 0%, 95%);
+  border: none;
+  border-radius: 50px;
+  width: 130px;
+  height: 45px;
+  box-sizing: border-box;
+}
+.card .luxury .button:hover {
+  cursor: pointer;
+  background-color: transparent;
+  color: hsl(0, 0%, 95%);
+  border: 2px solid hsl(0, 0%, 95%);
+}
+.card .luxury {
+  border-radius: 0 0 10px 10px;
+}
+
+.attribution {
+  font-family: "Lexend Deca", sans-serif;
+}
+.attribution a {
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .card {
+    width: 80%;
+    margin: 0;
+  }
+  .card .sedans {
+    width: 33.3%;
+    height: 500px;
+    position: relative;
+  }
+  .card .sedans .button {
+    position: absolute;
+    bottom: 50px;
+  }
+  .card .sedans {
+    border-radius: 10px 0 0 10px;
+  }
+  .card .suvs {
+    width: 33.3%;
+    height: 500px;
+    position: relative;
+  }
+  .card .suvs .button {
+    position: absolute;
+    bottom: 50px;
+  }
+  .card .luxury {
+    width: 33.3%;
+    height: 500px;
+    position: relative;
+  }
+  .card .luxury .button {
+    position: absolute;
+    bottom: 50px;
+  }
+  .card .luxury {
+    border-radius: 0 10px 10px 0;
+  }
+}
+@media only screen and (min-width: 1080px) {
+  .card {
+    width: 65%;
+  }
+}/*# sourceMappingURL=style.css.map */
